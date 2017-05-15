@@ -21,13 +21,16 @@ const ArtBox = ({ article }) => {
           <a>{title}</a>
         </h1>
       </header>
-      <div className="content post-summary">
-        {summary}
-      </div>
-      <div className="post-tags">
-        <span className="tag is-info">Web</span>
-        <span className="tag is-success">JavaScript</span>
-        <span className="tag is-warning">Node.js</span>
+      <div className="content post-summary" dangerouslySetInnerHTML={{ __html: summary }} />
+      <div className="post-footer">
+        <div className="post-tags">
+          <span className="tag is-info">Web</span>
+          <span className="tag is-success">JavaScript</span>
+          <span className="tag is-warning">Node.js</span>
+        </div>
+        <div className="post-more">
+          <a>Continue Reading</a>
+        </div>
       </div>
     </div>
   )
